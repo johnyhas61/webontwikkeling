@@ -1,0 +1,97 @@
+## 2.3 Veel gebruikte tags {.unnumbered}
+
+Er is een uitgebreide lijst met [tags](https://www.w3schools.com/tags/default.asp){.external target="_blank"} die gebruikt kunnen worden om een webpagina te maken. Toch zul je bij het maken van websites over het algemeen slechts een klein deel hiervan gebruiken. In de volgende paragrafen worden een aantal veel gebruikte tags toegelicht.
+
+### 2.3.1 Hoofdstuktitels{.unnumbered}
+
+Binnen HTML zijn standaard 6 niveau's voor hoofdstuktitels beschikbaar: h1 tot en met h6. Hierbij staat h1 voor het hoogste niveau (grootste tekst) en h6 voor het laagste niveau. In tegenstelling tot veel andere tags hebben deze tags wel een standaard opmaak. In afbeelding 1 zie je de standaard opmaak van de verschillende hoofdstuktitels (lettertype is standaard Times New Roman van de browser Firefox).
+
+![fig. 1 Standaard opmaak hoofdstuktitels](images/hoofdstuktitels.png){fig-align="left"}
+
+### 2.3.2 Paragrafen {.unnumbered}
+
+Misschien wel de meest gebruikte tag in HTML pagina's is de paragraaf tag: &lt;p&gt;. deze tag zorgt voor het groeperen van tekst in een paragraaf. De tag zorgt er voor dat een tekst op een nieuwe regel begint en dat er voor de tekst een blanko regel wordt geplaatst. 
+
+### 2.3.3 Hyperlinks{.unnumbered}
+
+De HT uit HTML staat voor HyperText. Hiermee wordt bedoeld dat teksten met elkaar gelinkt kunnen worden. In het begin van het ontstaan van HTML was dit ook het hoofddoel: teksten met elkaar kunnen koppelen. Het linken naar een andere pagina of naar een specifieke locatie in een pagina wordt gedaan met behulp van de a-tag. De a staat hier voor anker.
+
+De a-tag moet minimaal het attribuut href (hyperlink reference) bevatten waarin aangegeven wordt waar de link naartoe wijst. De waarde van dit attribuut kan zijn:
+
+* De naam van een andere HTML-pagina van de website.
+* De url van een andere website.
+* Een id van de pagina waar de link zich bevindt.
+
+De a-tag bestaat uit een open- en een sluit-tag. De tekst tussen deze tags is de tekst op de pagina waarop geklikt kan worden om de link te volgen. De a-tag heeft standaard een opmaak die bestaat uit een blauwe onderstreepte tekst. Als de link eenmaal gevolgd is, is de opmaak een paarse onderstreepte tekst. Aanpassen van deze standaard opmaak kan met behulp van CSS.
+
+Indien de link wijst naar een andere HTML-pagina van de website of een id op de pagina dan is het wenselijk dat de link opent in het zelfde browser venster. Indien echter naar een externe website wordt gelinkt dan is het juist wenselijk dat deze link in een nieuw tabblad wordt geopend. Dit kan door het attribuut target te gebruiken en deze de waarde "_blank" te geven. In figuur 2 staan een aantal voorbeelden van links.
+
+![fig. 2 Voorbeelden van hyperlinks](images/links.png){fig-align="left"}
+
+De eerste link zorgt ervoor dat er naar een nieuwe HTML-pagina gelinkt wordt met de naam index.html. Dit bestand staat in dezelfde folder als het document waarin zich de link bevindt. De tweede link zorgt ervoor dat er op de huidige HTML-pagina naar een id="opleidingen" wordt gesprongen. In de derde link worden de voorgaande twee links gecombineerd. Hierbij wordt naar het id="opleidingen" op de HTML-pagina index.html gesprongen. Dus naar een andere pagina dan de huidige. De laatste link zorgt ervoor dat de website nu.nl wordt geopend in een nieuw tabblad. De gebruiker kan in de browser instellen of dit soort links in een nieuw tabblad of een nieuw venster (de browser wordt nogmaals opgestart) wordt geopend. 
+
+### 2.3.4 Afbeeldingen{.unnumbered}
+
+Afbeeldingen worden in een webpagina toegevoegd met behulp van de img-tag. Dit is een tag die geen sluit-tag heeft. Bij deze tag is het src-attribuut verplicht. Hierin wordt de naam van de afbeelding opgenomen. Vaak worden afbeeldingen in een submap opgenomen. Via het relatieve pad wordt de naam van de afbeelding in het src-attribuut opgenomen. In figuur 3 staat een overzicht van de verschillende afbeeldingsformaten die door de belangrijkste browsers (Chrome, Edge, Firefox, Safari, Opera) ondersteund worden.
+
+![fig. 3 Ondersteunde afbeeldingsformaten (bron: W3Schools.com)](images/image%20formats.png){fig-align="left"}
+
+Aangeraden wordt om bij elke afbeelding het alt-attribuut op te nemen. Als waarde wordt aan dit attribuut een tekst toegewezen. Deze tekst wordt getoond op websites als de gebruiker in de browser heeft ingesteld dat er geen afbeeldingen getoond worden. Deze tekst wordt bovendien voorgelezen als slechtzienden de pagina laten voorlezen. (zie figuur 4.) Het gebruik van het alt-attribuut zorgt voor een hogere ranking in zoekresultaten van zoekmachines. 
+
+![fig. 4 De img-tag met alt-tekst](images/img%20tag%20met%20alt.png){fig-align="left"}
+
+Een afbeelding wordt op de webpagina getoond in de afmetingen van de afbeelding zelf. Dus een plaatje van 800 bij 600 pixels zal ook in dat formaat getoond worden op de webpagina. Hoewel het de voorkeur heeft om deze afmeting aan te passen via CSS wordt dit ook vaak gedaan via de __WIDTH__ en __HEIGHT__ attributen van de img-tag. Als deze gebruikt worden is het makkelijk om één van beide te gebruiken. De ander past zich automatisch aan zodat de lengte-breedte-verhouding hetzelfde blijft. Als beide attributen opgenomen worden bestaat het gevaar dat de afbeelding op de webpagina vervormd wordt weergegeven als de ingevulde waarden voor de attributen in een andere verhouding zijn als de verhouding van de lengte en breedte van de afbeelding.
+
+
+### 2.3.5 Lijsten{.unnumbered}
+
+In HTML worden twee soorten lijsten gebruikt: ongeordende- en geordende lijsten. Bij ongeordende lijsten (ul-tag) worden zogenaamde bullets voor de items in de lijst getoond. Via CSS kan het type bullet aangepast worden. Bij geordende lijsten (ol-tag) worden de items voorafgegaan door een cijfer of letter. Ook hier kan via CSS de stijl van nummering aangepast worden. Zowel de ul- als de ol-tag hebben beide een sluit-tag. Tussen deze tags worden de verschillende items ingesloten tussen &lt;li&gt; en &lt;/li&gt;. 
+
+Het is mogelijk om lijsten van meerdere niveau's te maken en om ongeordende- en geordende lijsten te combineren. Om een lijst van meerdere niveau's te maken wordt een nieuwe lijst (&lt;ol&gt; of &lt;ul&gt;) geopend en gesloten binnen een &lt;li&gt;.
+
+In figuur 5 staan elke voorbeelden van lijsten en hoe deze getoond worden op een webpagina.
+
+::: {layout-ncol=2 layout-valign="bottom"}
+
+![fig. 5a Enkelvoudige lijsten](images/enkelvoudige%20lijsten%20html.png){fig-align="left"}
+
+![In de browser](images/enkelvoudige%20lijsten%20browser.png){fig-align="left"}
+
+![fig. 5b Meervoudige lijsten](images/meervoudige%20lijsten%20html.png){fig-align="left"}
+
+![In de browser](images/meervoudige%20lijsten%20browser.png){fig-align="left"}
+
+![fig. 5c Gemengde lijst](images/gemengde%20lijst%20html.png){fig-align="left"}
+
+![In de browser](images/gemengde%20lijst%20browser.png){fig-align="left"}
+:::
+
+### 2.3.6 Tabellen{.unnumbered}
+
+Het is mogelijk om met behulp van HTML uitgebreide en complexe tabellen te maken. Als gevolg van deze mogelijkheden werden tabellen zelfs lang gebruikt om webpagina's in te delen in verschillende gebieden. Tegenwoordig wordt dit gedaan met CSS, omdat tabellen moeilijk responsive te maken zijn en dus op mobiele devices slecht tonen.
+
+Voor het maken van tabellen worden een aantal tags gebruikt:
+
+* De &lt;table&gt; en &lt;/table&gt; omsluiten de volledige tabel.
+* Elke rij wordt tussen de &lt;tr&gt; en &lt;/tr&gt; tags geplaatst. Hierbij staat tr voor table row.
+* De verschillende kolommen worden tussen &lt;td&gt; en &lt;/td&gt; geplaatst. In dit geval staat td voor table data.
+* Het is mogelijk om de td-tags te vervangen door &lt;th&gt; en &lt;/th&gt;. Hierin staat th voor table header. Deze worden gebruikt om een kopregel in de tabel te maken. Deze hebben standaard een afwijkende opmaak waarbij de tekst vet en gecentreerd in een cel geplaatst wordt.
+
+In principe hebben alle rijen hetzelfde aantal kolommen. Aanpassingen hierin kunnen gedaan worden door bij een cel (&lt;td&gt;) de attributen __COLSPAN__ of __ROWSPAN__ op te nemen. Het getal hierbij geeft aan over hoeveel kolommen de cel gaat (COLSPAN) of hoeveel rijen (ROWSPAN).
+
+In onderstaande afbeeldingen staat een voorbeeld tabel in HTML en hoe dit er in de browser uitziet. De rand om de tabel wordt standaard niet getoond, maar is in dit geval toegevoegd om de cellen beter te zien. Via CSS kan deze rand toegevoegd worden. Hetzelfde geldt voor de ruimte om de cellen en de ruimte binnen de cel.
+
+::: {layout-ncol=2 layout-valign="bottom"}
+
+![fig. 6 Een tabel](images/tabel%20html.png){fig-align="left"}
+
+![In de browser](images/tabel%20browser.png){fig-align="left"}
+:::
+
+### 2.3.7 DIV's{.unnumbered}
+
+In [paragraaf 2.2.2](tags.html#basis-html-document) is een overzicht gegeven van tags die gebruikt kunnen worden om een HTML-pagina in te delen. In de praktijk zal blijken dat er behoefte is aan meer tags om dit te doen. In dat geval kan gebruik worden gemaakt van de div-tag. De tag heeft ook een sluit-tag. In webpagina's die gemaakt zijn voordat HTML-5 uitkwam is de volledige indeling van de pagina vaak gedaan op basis van de div-tag. Ze worden vaak gebruikt in combinatie het id- of class-attribuut om specifieke opmaak aan deze elementen te koppelen. Standaard heeft de div-tag geen opmaak. Wel zorgt deze tag ervoor dat er op een nieuwe regel in de browser wordt begonnen.   
+
+### 2.3.8 Span{.unnumbered}
+
+Soms is er behoefte om slechts een deel van een tekst een afwijkende opmaak te geven. In dat geval kan de span-tag gebruikt worden om dit te regelen. De &lt;span&gt; en &lt;/span&gt; worden om de specifieke tekst geplaatst. Aan de &lt;span&gt; wordt het id- of class-attribuut toegevoegd waarmee in CSS de opmaak voor dat specifieke deel gemaakt wordt. Bij deze tag wordt er, in tegenstelling tot de div-tag, niet naar een nieuwe regel gegaan in de browser. 

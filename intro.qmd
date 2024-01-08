@@ -1,0 +1,14 @@
+# Inleiding
+
+De term webontwikkeling is een ruim begrip. Er zijn heel veel verschillende manieren en programmeertalen om programmas te ontwikkelen voor het Web. Toch leidt dit uiteindelijk allemaal tot de basis van webpagina's, namelijk HTML, CSS en JavaScript. Dit zijn de drie onderdelen die er voor zorgen dat een webbrowser een webpagina kan opbouwen en tonen. 
+
+Deze drie onderdelen hebben alledrie hun eigen functie in een webpagina:
+
+* Met HTML wordt de structuur en inhoud van een webpagina gemaakt. 
+* CSS zorgt voor de vormgeving (uiterlijk en indeling) van een webpagina.
+* Door middel van JavaScript kan interactie en dynamiek aan een webpagina worden toegevoegd. 
+
+In dit lesmateriaal wordt uitgelegd hoe deze drie onderdelen samen een webpagina kunnen vormen. 
+
+Tot slot wordt uitgelegd hoe je met behulp van JavaScript en de frameworks Leaflet of Openlayers een interactieve kaart aan een webpagina toe kan voegen.
+

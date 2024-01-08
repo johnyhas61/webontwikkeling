@@ -1,0 +1,30 @@
+## 4.1 Inleiding JavaScript {.unnumbered}
+
+JavaScript is het derde onderdeel, naast HTML en CSS, dat gebruikt wordt om webpagina&lsquo;s te ontwikkelen. JavaScript wordt gebruik om interactiviteit toe te voegen aan een pagina en om de pagina dynamisch te maken.
+
+JavaScript is jarenlang een beetje een ondergeschoven kindje geweest in de webontwikkeling. Het werd veelal gezien als noodzakelijk kwaad om bewegende elementen aan een website toe te voegen. 
+
+Tegenwoordig waarbij steeds meer toepassingen van desktop- naar web-applicaties gaan in combinatie met het gebruik van __AJAX__ (Asynchronous JavaScript and XML) wint JavaScript steeds meer aan belangrijkheid. Ook op het gebied van mobiele apps gaat JavaScript een steeds belangrijkere rol spelen. Dit heeft ervoor gezorgd dat JavaScript tegenwoordig één van de talen is waarin het meest geprogrammeerd wordt.
+
+
+### 4.1.1 JavaScript vs Java {.unnumbered}
+
+Er is veel verwarring over de twee programmeertalen Java en JavaScript. Buiten het feit dat de namen op elkaar lijken en de syntax allebei is afgeleid van de taal C en dus op elkaar lijkt hebben ze niet zo veel gemeen. JavaScript is een scripting taal die voornamelijk door een webbrowser uitgevoerd wordt. Java daarentegen is een object georiënteerde compilertaal waarmee desktop applicaties ontwikkeld kunnen worden. Een belangrijke toepassing van Java betreft het ontwikkelen van native apps voor het Android besturingssysteem.
+
+
+### 4.1.2 JavaScript vs TypeScript {.unnumbered}
+
+Microsoft heeft de programmeertaal TypeScript ontwikkeld. Het is een uitbreiding op JavaScript waarbij typing en object oriëntatie zijn toegevoegd. TypeScript kan vertaald worden naar JavaScript. Omdat TypeScript een uitbreiding is van JavaScript is elk JavaScript-programma tevens een geldig TypeScript-programma.
+
+
+### 4.1.3 JavaScript toevoegen aan een webpagina {.unnumbered}
+
+Je kunt JavaScript op drie manieren toevoegen aan een webpagina:
+
+@. Inline; dit wil zeggen opgenomen in een event-attribuut in een HTML-tag.
+@. Tussen een &lt;script&gt; en een &lt;/script&gt; kan JavaScript code geschreven worden.
+@. In een apart JavaScript bestand dat via &lt;script src="naam van het bestand"&gt;&lt;/script&gt; aan de HTML-pagina gekoppeld wordt.
+
+Het is belangrijk om te realiseren dat de JavaScript onmiddellijk uitgevoerd wordt zodra de browser deze tegenkomt. De plaats waar de JavaScript-code geplaatst wordt binnen de HTML-pagina bepaald dus wanneer de code uitgevoerd wordt. Bij het laden van een apart JavaScript bestand (optie 3) kan door het toevoegen van het __defer__ attribuut aan de script-tag ervoor gezorgd worden dat het script pas uit gaat voeren als de volledige pagina geladen is. In figuur 1 staan de drie 3 opties als voorbeeld. 
+
+![fig. 1 JavaScript toevoegen aan een webpagina](images/js%20in%20een%20webpagina.png){fig-align="left"}

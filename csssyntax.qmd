@@ -1,0 +1,122 @@
+## 3.2 CSS syntax {.unnumbered}
+
+De CSS-syntax is relatief simpel. In figuur 1 staat een voorbeeld van een CSS-opmaak.
+
+![fig. 1 CSS syntax](images/csssyntax.png){fig-align="left"}
+
+Elementen hierin zijn:
+
+* selector: deze geeft aan voor welk onderdeel van een webpagina de betreffende opmaak van toepassing is. Dit kan een HTML-element, een * voor alle HTML elementen, een id of een class zijn. In de volgende paragraaf wordt hier verder op in gegaan.
+* accolades: tussen deze accolades wordt alle opmaak voor het bij de selector aangegeven onderdeel van de webpagina ingesteld.
+* één of meerdere regels bestaande uit:
+  * een eigenschap (property)
+  * een dubbele punt (:)
+  * de waarde die de eigenschap krijgt
+  * een puntkomma (;) 
+
+### 3.2.1 Element, class en id {.unnumbered}
+
+De selector in een CSS opmaak kan een HTML-element (tag), een * voor alle HTML-elementen, een id of een class zijn. Indien het een HTML-element is dan wordt als selector tekst van de tag gebruik zonder de &lt;, &gt; en eventuele attributen. In figuur 2 staan een aantal voorbeelden van CSS voor HTML-elementen. Hierin wordt opmaak ingesteld voor alle tags, de body-, header- en a-tag.
+
+![fig. 2 CSS voorbeeld HTML-elementen](images/css%20elements.png){fig-align="left"}
+
+Soms is het nodig om voor een specifiek alement op een webpagina afwijkende opmaak in te stellen. Door een tag te gebruiken wordt de opmaak voor alle betreffende tags ingesteld. Om dit voor een specifieke tag te doen kan een id of class aan dat element gekoppeld worden. Een id kan slechts 1 keer voorkomen op een webpagina terwijl een class meerdere keren voor kan komen. 
+
+Opmaak voor een id wordt voorafgegaan van een hashtag (#) terwijl opmaak voor een class voorafgegaan wordt door een punt (.). In figuur 3 wordt de opmaak voor een element met een id="map" en een element met een class="rodetekst" ingesteld. 
+
+![fig. 3 CSS voorbeeld id en class](images/id%20en%20class%20css.png){fig-align="left"}
+
+### 3.2.2 Pseudo-classes {.unnumbered}
+
+Het is mogelijk om opmaak in te stellen voor verschillende toestanden waarin een element zich kan bevinden. Hierbij wordt gebruik gemaakt van zogenaamde pseudo-classes. Een pseudo-class wordt achter het element in de css geplaatst voorafgegaan door een dubbele punt (:). In figuur 4 staat een voorbeeld van de pseudo-class __hover__ bij een hyperlink. Deze pseudo-class definieert de opmaak voor de link als de gebruiker met de muis over de link heen beweegt (hovert).   
+
+![fig. 4 Pseudo-class](images/pseudo%20class.png){fig-align="left"}
+
+Een overzicht van pseudo-elementen vind je [hier](https://www.w3schools.com/css/css_pseudo_elements.asp){.external target="_blank"}
+
+### 3.2.3 Generiek vs. specifiek {.unnumbered}
+
+Indien in de CSS opmaak wordt ingesteld voor een HTML-element dan wordt deze opmaak toegepast op al die HTML-elementen op een pagina. Voor een aantal tags, zoals de body of header is dat geen probleem, omdat die toch maar één keer voorkomen op een pagina. Voor andere tags, zoals bijvoorbeeld de a, img, ul en ol, kan dit onwenselijk zijn. In dat geval is het mogelijk om een id of class aan het element te koppelen, maar het is ook mogelijk om opmaak meer specifiek te maken door de element structuur over te nemen. In figuur 5 staat een voorbeeld van opmaak voor alleen de hyperlinks die binnen de nav-tag vallen. Alle andere hyperlinks krijgen deze opmaak niet.
+
+![fig. 5 Specifieke opmaak](images/nav%20a%20tag.png){fig-align="left"}
+
+Je kunt dit ver doorvoeren tot een lange lijst met tags om de opmaak steeds specifieker te maken. In figuur 6 is dit gedaan om van een ongeordende lijst met hyperlinks in de nav-tag om te vormen tot een menubalk met knoppen.
+
+![fig. 6 Menubalk](images/nav%20ul%20li%20a.png){fig-align="left"}
+
+
+### 3.2.4 Verkorte schrijfwijze {.unnumbered}
+
+Het is mogelijk om binnen CSS eigenschappen en waarden voor deze eigenschappen te combineren. Zo kun je voor een rand zowel de kleur, het soort lijn en de dikte in 1 CSS regel instellen. Dit noemen we een verkorte schrijfwijze. Het voordeel is dat het minder typewerk is. Het nadeel is dat de CSS minder leesbaar wordt. In figuur 7 staat een voorbeeld van het instellen van een rand van een tabel in de verkorte manier en de uitgebreide manier.  
+
+![fig. 7 Verkorte rand](images/border%20verkort.png){fig-align="left"}
+
+Vooral bij het instellen van verschillende margins of paddings moet je precies weten welke van de vier zijden (top, bottom, right, left) de verschillende getallen instellen. In figuur 8 kun je dit terug zien voor een margin instelling.
+
+![fig. 8 Verkorte margin](images/margin%20verkort.png){fig-align="left"}
+
+### 3.2.5 Eigenschappen {.unnumbered}
+
+Het instellen van de opmaak van een selector gebeurd aan de hand van zogenaamde eigenschappen (properties). Er is een lange [lijst](https://www.w3schools.com/cssref/index.php){.external target="_blank"} met mogelijke eigenschappen, maar niet elke eigenschap geldt voor elke selector. Elke eigenschap heeft een standaard (default) waarde. Soms is deze standaard waarde vast (a-tags zijn standaard blauw en onderstreept), soms is deze bepaald door de browser (het standaard lettertype) en soms word deze bepaald door de waarde van dezelfde eigenschap van het bovenliggende element (het waterval principe). Het is mogelijk om dezelfde eigenschap voor een selector in meerdere CSS bestanden in te stellen. Hierbij wordt de laatste regel (het CSS bestand dat het laatste wordt gekoppeld) toegepast. Als aan een CSS regel __!important__ wordt toegevoegd voor de puntkomma kan deze eigenschap niet overschreven worden door een latere regel in de CSS.  
+
+### 3.2.6 Fonts {.unnumbered}
+
+Als voor een website geen font (lettertype) wordt ingesteld gebruikt de browser het standaard lettertype dat in de browser is ingesteld. Omdat de gebruiker dit zelf in kan stellen kan de website er in iedere browser anders uitzien. Dit wil je als ontwerper niet. Het is daarom aan te raden altijd een font in te stellen.
+
+Dit instellen doe je door in de CSS voor de body-tag de font-family eigenschap in te stellen. De waarde die je deze eigenschap geeft bestaat uit een lijst met op elkaar lijkende fonts (zie figuur 9). Door het waterval principe wordt het font voor alle onderliggende elementen toegepast en dus voor de hele site.
+
+![fig. 9 font-family](images/font-family.png){fig-align="left"}
+
+De browser maakt gebruik van fonts die lokaal op de computer, waar de browser op draait, geïnstalleerd zijn. Omdat dit een Windows, Apple, Linux, Android enz. computer kan zijn, zijn mogelijk niet overal dezelfde fonts beschikbaar. De browser kijkt of het eerste font uit de lijst beschikbaar is. Zo ja, dan wordt dit font gebruikt. Zo nee dan wordt gekeken of het volgende font uit de lijst beschikbaar is. En dat gaat zo door tot een font gevonden is. Het laatste font is meestal een erg algemeen font dat op alle soorten besturingssystemen beschikbaar is.
+
+Een andere mogelijkheid is om gebruik te maken van zogenaamde web-fonts. Dit zijn fonts die gedownload kunnen worden naar de omgeving van de website of die via het internet gebruikt kunnen worden. Er kunnen een aantal formaten gebruikt worden als fonts. In figuur 10 staat een overzicht van fontformaten en de ondersteuning door de belangrijkste browsers.
+
+![fig. 10 font formaten (bron w3schools.com)](images/font%20formaten.png){fig-align="left"}
+
+Als je een font gevonden hebt dat je wilt gebruiken dan download je dat font en plaatst het in de mappenstructuur van je website. Vervolgens neem je een __font-face__ regel op in de CSS waarna het font te gebruiken is als een "normaal" font in de font-family eigenschap. In figuur 11 staat een voorbeeld van het gebruik van een gedownload font.
+
+![fig. 11 lokaal font](images/lokaal%20font.png){fig-align="left"}
+
+Ook is het mogelijk om een font te gebruiken dat door Google online wordt aangeboden. Om dit te doen ga je naar de [Google fonts website](https://fonts.google.com/){.external target="_blank"} en zoek het font dat je wilt gebruiken. Als je een font gevonden hebt klik je op de regel van het font op de knop met select. In het rechterscherm verschijnt informatie om het font online te gebruiken (zie figuur 12).
+
+![fig. 12 Google fonts site](images/google%20fonts%20site.png){fig-align="left"}
+
+Kopieer de link en plak deze in de head sectie van de HTML-pagina (zie figuur 13).
+
+![fig. 13 Link naar online font](images/font%20link.png){fig-align="left"}
+
+Vervolgens kun je in de CSS gebruik maken van het font door de naam van het font tussen quotes te zetten in de font-family eigenschap (zie figuur 14).
+
+![fig. 14 CSS voor online font](images/font%20link%20css.png){fig-align="left"}
+
+### 3.2.7 Kleuren {.unnumbered}
+
+Met CSS kunnen kleuren ingesteld worden via een groot aantal eigenschappen. Zo kan de achtergrondkleur (eigenschap = background-color) van elementen, de tekstkleur (color), randkleur (border-color) enz ingesteld worden. Je kunt hierbij kiezen uit ruim 16 miljoen verschillende kleuren. Kleuren zijn opgebouwd uit de combinatie van drie hoofdkleuren: rood, groen en blauw (RGB). Voor elk van deze drie kleuren kan door middel van een getal van 0 tot 255 de mate waarin de kleur aanwezig is aangegeven worden. Hierin is 0 volledig afwezig en 255 volledig aanwezig. Dit levert 256 * 256 * 256 (= 16.777.216) mogelijkheden op. Een aantal van deze kleurcombinaties heeft een [naam](https://www.w3schools.com/colors/colors_names.asp){.external target="_blank"} die gebruikt kan worden in CSS (zie figuur 15).
+
+![fig. 15 Kleurnamen](images/color%20name.png){fig-align="left"}
+
+Naast het gebruik van namen kan de kleur ook ingesteld worden door de waarden van de drie afzonderlijk kleuren (RGB) op te geven. Dit kan op verschillende manieren. Als eerste kan de eigenschap ingesteld worden met de rgb- of rgba functie. Bij de eerste functie worden de drie afzonderelijke getallen voor de drie hoofdkleuren decimaal gescheiden door komma's mee gegeven. Bij de rgba functie wordt ook nog als vierde een getal tussen 0 en 1 meegegeven die de mate van doorzichtigheid aangeeft. Hierbij is 0 volledig doorzichtig en 1 volledig dekkend. In figuur 16 staat een voorbeeld van het gebruik van beide functies. 
+
+![fig. 16 RGB functies](images/color%20rgb.png){fig-align="left"}
+
+Een andere veel gebruikte manier om kleuren aan te geven is via zogenaamde hex-codes. Hierbij worden de drie getallen van de hoofdkleuren niet decimaal, maar hexadecimaal (16-tallig) weergegevens. Bij hexadecimale getallen worden naast de getallen 0 tot en met 9 ook de letters A tot en met F gebruikt. Waarden bij A voor 10 staat, de B voor 11, de C voor 12, de D voor 13, de E voor 14 en de F voor 15. Hiermee wordt de hoogste waarde 255 als FF genoteerd. Door de drie tweetallen voor de drie hoofdkleuren achter elkaar te plaatsen en voorafgegaan door een hekje (#) wordt een specifieke kleur ingesteld. Op deze manier is het niet mogelijk om ook een mate van doorzichtigheid op te geven. In figuur 17 staat een voorbeeld met hex-codes.
+
+![fig. 17 HEX-codes voor kleuren](images/color%20hax.png){fig-align="left"}
+
+In onderstaande tabel staan een aantal makkelijke hex-codes.
+
+::: {style="font-size: 80%;"}
+| hex-code | kleur |
+|---|---|
+| #000000  | zwart  |
+| #FFFFFF  | wit |
+| #FF0000 | rood |
+| #00FF00  | groen  |
+| #0000FF | blauw |
+| #xxyyzz | waarbij xx, yy en zz hetzelfde zijn: grijstinten (bijv. #D9D9D9) |
+| #xyz | kan gebruikt worden als verkorting voor #xxyyzz waarbij de tweetallen bestaan uit twee keer hetzelfde character (bijv. #D9F is hetzelfde als #DD99FF) |
+: {tbl-colwidths="[25,75]"}
+:::
+
+Over het algemeen geldt dat hoe hoger de waarde voor een kleur is hoe lichter de kleur is. Het gebruik van een color-picker om van een kleur, van een bepaalde website die je mooi vindt en die je wilt gebruiken, de rgb- of hex-waardes op te halen kan handig zijn. 
+

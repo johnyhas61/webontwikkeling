@@ -1,0 +1,103 @@
+project:
+  type: book
+
+book:
+  title: "Webontwikkeling"
+  language: nl
+  author: "John Ypma"
+  date: today
+  date-format: "D MMMM YYYY"
+  favicon: images/has-logo-dark.png
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - part: "2 HTML"
+      chapters:
+      - html.qmd
+      - tags.qmd
+      - maintags.qmd
+    - part: "3 CSS"
+      chapters:
+      - css.qmd
+      - csssyntax.qmd
+      - boxmodel.qmd
+      - responsive.qmd
+    - part: "4 JavaScript"
+      chapters:
+      - javascript.qmd
+      - jssyntax.qmd
+      - jquery.qmd
+    - part: "5 Leaflet"
+      chapters:
+      - leaflet.qmd
+    - part: "6 Openlayers"
+      chapters:
+      - openlayers.qmd
+    - naslag.qmd
+  page-navigation: true
+  #
+  # als je geen menubalk wil kun je de volgende 
+  # regels verwijderen of op commentaar zetten
+  # tot ......
+  navbar:
+    background: primary
+  #
+  # Dit is het logo dat in de menubalk links staat.
+  # Als je het thema verandert naar de lichtgroene
+  # kleur kun je hieronder de naam van het logo
+  # veranderen in HAS-logo-donker.png
+  # 
+    logo: images/HAS-logo-light.png
+    search: true
+    left:
+      - text: "Home"
+        file: index.qmd
+      - text: "Inleiding"
+        file: intro.qmd
+      - text: "HTML"
+        file: html.qmd
+      - text: "CSS"
+        file: css.qmd
+      - text: "JavaScript"
+        file: javascript.qmd
+      - text: "Leaflet"
+        file: leaflet.qmd
+      - text: "Openlayers"
+        file: openlayers.qmd
+      - text: "Naslag"
+        file: naslag.qmd 
+      # - text: "W3Schools HTML"
+      #   url: https://www.w3schools.com/html/default.asp
+      # - text: "W3Schools CSS"
+      #   url: https://www.w3schools.com/css/default.asp
+      # - text: "W3Schools JavaScript"
+      #   url: https://www.w3schools.com/js/default.asp
+      # - text: "Leaflet"
+      #   url: https://leafletjs.com/
+  # ... hier
+  page-footer: |
+    &copy; HAS green academy
+      
+bibliography: references.bib
+
+format:
+  html:
+    link-external-icon: true
+    link-external-newwindow: true
+    theme: 
+      - cosmo
+# verander onderstaan regel naar het gewenste scss 
+# bestand voor een andere opmaak
+# je kunt kiezen uit:
+#   has-default.scss (donker groen)
+#   has-light.scss (licht groen)
+#   has-blauw.scss (Blauw)
+#   has-rood.scss (Rood)
+#   has-paars.scss (Paars/Roze) 
+      - styles/has-default.scss
+    css:
+      - styles/has-algemeen.css
+
+
+
+

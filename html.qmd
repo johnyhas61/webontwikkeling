@@ -1,0 +1,69 @@
+## 2.1 Inleiding HTML {.unnumbered}
+
+De basis van een webpagina wordt gevormd door de "programmeer"-taal HTML. HTML staat voor HyperText Markup Language en dit komt voort uit de functie waarvoor het Internet ooit is opgezet; het, door middel van hyperlinks, aan elkaar koppelen van (tekst)documenten. De taal is voor het eerst gepubliceerd in 1993. Gezien het feit dat 30 jaar later dit nog steeds de kern van webpagina's vormt geeft het belang van deze taal aan. De afgelopen jaren is de taal grondig aangepast aan de nieuwe vormen van gebruik van het internet met video en audio. Dit heeft geresulteerd in het uitkomen van HTML versie 5 in 2012.
+Er is een consortium, ([W3C](https://www.w3.org/){.external target="-blank"}) dat standaarden heeft opgesteld en onderhoudt voor HTML, maar ook voor CSS en JavaScript.
+
+### 2.1.1 Webservers {.unnumbered} 
+
+Hoewel je HTML-pagina's op je eigen lokale computer kunt gebruiken en openen zullen de pagina's om via het internet gebruikt te kunnen worden via een webserver "geserveerd" moeten worden. In onderstaande afbeelding staat schematisch weergegeven hoe dit werkt.
+
+![fig. 1 Webserver](images/webserver.png)
+
+
+@. In de browser op de cliënt-computer wordt in de adresbalk een url (Uniform Resource Locator) ingetypt. Deze url kan wel of geen html-paginanaam bevatten.
+@. De browser zal de url versturen via de netwerkaansluiting met het internet.
+@. Via 1 of meer zogenaamde DNS-systemen (Distributed Naming Server) wordt de url vertaald naar het IP-adres van de server waar de website op staat. 
+@. De ontvangende server zal het verzoek doorgeven aan de webserver software die op de server continue draait.
+@. Als er een paginanaam is meegegeven in de url gaat de webserver software kijken of deze pagina aanwezig is. Als dat het geval is wordt de pagina terug gestuurd naar de cliënt-computer. Als de pagina niet aanwezig is op de server stuurt de server een foutcode (404) naar de cliënt-computer.
+@. Als er geen naam is meegegeven in de url gaat de webserver software een lijstje af met standaard webpaginanamen om te kijken of 1 van deze pagina's op de server aanwezig zijn. Dit lijstje is per server verschillend en is afhankelijk van welke soorten pagina's door de webserver software ondersteund worden. In dit lijstje komen vaak index.html, index.htm en default.html voor. De eerste pagina uit het lijstje die gevonden wordt, wordt opgestuurd naar de cliënt-computer. Als geen van de pagina's uit het lijstje gevonden wordt, stuurt de server een foutcode (404) naar de cliënt-computer.
+@. Als op de cliënt-computer de webpagina ontvangen is wordt deze doorgegeven aan de browser. 
+@. De browser opent de pagina en zal op basis van de HTML-code de webpagina op gaan bouwen.
+
+Meestal bestaat een website uit meer dan alleen de startpagina. Bovendien zijn er ook extra bestanden nodig voor de opmaak (CSS) en interactiviteit (JavaScript) van de webpagina. En ook als er afbeeldingen op de pagina staan dan zijn dit aparte bestanden. Voor elk van deze bestanden zullen de bovenstaande stappen doorlopen worden. In dat geval hoeft de vertaling van de url naar een IP-adres niet lang meer te duren. De cliënt-computer weet inmiddels dit adres en de vervolgverzoeken zullen dus sneller gaan. 
+
+### 2.1.2 Webpagina's ontwikkelen {.unnumbered}
+
+De bestanden die je maakt bij het ontwikkelen van websites zijn zogenaamde __platte tekst__- of __ASCII__-bestanden. Dit wil zeggen dat het ontwikkelen van webpagina's met de meest simpele editor (bijvoorbeeld kladblok op Windows computers) gedaan kan worden. Het gebruik van een zogenaamde IDE (Integrated Development Environment) kan het ontwikkelen echter een stuk sneller en met minder problemen laten verlopen. In principe kan elke IDE gebruikt worden. Bij het ontwikkelen van dit lesmateriaal is gebruik gemaakt van [Visual Studio Code](https://code.visualstudio.com/){.external target="-blank"} van Microsoft&trade;. Eventuele code-voorbeelden in dit lesmateriaal komen uit Visual Studio Code.
+
+Je kunt de website testen door naar de map te gaan waar de HTML-bestanden staan en te dubbelklikken op één van de HTML-bestanden. Deze zal vervolgens geopend worden in de browser die je als standaard hebt ingesteld. Als je wijzigingen hebt aangebracht hoef je alleen de brwoser te verversen om de wijzigingen te kunnen zien. 
+
+### 2.1.3 Naamgeving en structuur {.unnumbered}
+
+In principe zijn er geen regels voor de naamgeving van de bestanden die gemaakt worden bij het ontwikkelen van websites. Toch is het handig om een aantal uitgangspunten in acht te nemen ten aanzien van de naamgeving. Deze uitgangspunten zijn:
+
+* Geef de startpagina van de website altijd de naam index.html zodat de naam van de pagina niet meegegeven hoeft te worden in de url.
+* Gebruik bij voorkeur alleen kleine letters in de naam van de bestanden. Sommige webservers zijn wat ze noemen hoofdlettergevoelig. Dat wil zeggen dat een bestandsnaam met een hoofdletter niet hetzelfde is als dezelfde naam met een kleine letter.
+* Gebruik geen spaties in de namen van bestanden.
+* Gebruik geen leestekens, eventueel wel de hyphen (-), in de namen van bestanden.
+* Gebruik voor webpagina's altijd de extensie .html, voor css-bestanden .css en voor JavaScript-bestanden .js. Hierdoor herkent de IDE het type bestand en zal allerlei handige hulp bieden bij het ontwikkelen.
+
+Ten aanzien van de structuur van de website zijn er ook geen regels waar je je aan moet houden. Ook hierbij zijn enkele uitgangspunten handig met het overzichtelijk en onderhoudbaar houden van je website. Deze richtlijnen zijn:
+
+* Gebruik submappen om verschillende typen bestanden in te plaatsen. Dit voorkomt dat alle bestanden door elkaar staan en kun je makkelijker bestanden vinden. Denk aan aparte submappen voor
+  * Afbeeldingen
+  * CSS
+  * JavaScript
+  * Frameworks van derden
+* Sommige bestanden, zoals CSS en JavaScript, kunnen erg lang worden. Je kunt vaak probleemloos je CSS en JavaScript verdelen over meerdere (logische) bestanden. Zo hou je je website overzichtelijk en voorkom je veel scrollen door de code als je naar iets op zoek bent.
+
+### 2.1.4 Absolute- vs. relatieve padverwijzing{.unnumbered}
+
+Bij het ontwikkelen van een website is het belangrijk om alle bestanden die lokaal opgeslagen en gebruikt worden in dezelfde mappen structuur staan. In de HTML wordt dan vervolgens verwezen naar de bestanden ten opzichte van het html-bestand. Dit noemt men relatieve padverwijzing. Als er bijvoorbeeld een afbeelding die in een submap __images__ wordt toegevoegd in een html-pagina dan ziet de code er als volgt uit:
+
+![fig. 2 Relatieve padverwijzing](images/relatief%20pad.png){fig-align="left"}
+
+Dit is de manier waarop je moet verwijzen naar bestanden. Als je aan het ontwikkelen bent heb je nogal gauw de neiging om absolute pad verwijzing te gebruiken. Een absoluut pad naar dezelfde afbeelding ziet er als volgt uit:
+
+![fig. 3 Absolute padverwijzing](images/absoluut%20pad.png){fig-align="left"}
+
+Zolang je aan het ontwikkelen en testen bent op je eigen computer werkt dit. Echter als je de website kopieert naar een andere computer of in productie wil nemen op een webserver, dan werkt dit niet meer. Op de andere computer is namelijk die mappenstructuur (waarschijnlijk) niet aanwezig.
+
+### 2.1.5 Browsers {.unnumbered}
+
+Bij webonwikkeling is het gebruik van een browser onontbeerlijk. Er zijn tientallen verschillende browsers, ieder met hun eigen voor- en nadelen. Welke browser je kiest is vooral een kwestie van persoonlijk voorkeur. Er is in die zin ook geen beste browser. Jarenlang is Internet Explorer (IE) van Microsoft een van de meest gebruikte browsers geweest. Dit tot groot verdriet van webontwikkelaars. Want hoewel er een standaard is opgesteld door het W3C week IE erg van deze standaard af. Webontwikkelaars moesten over het algemeen veel extra code schrijven om hun website zowel op IE als andere browsers goed te laten werken. Gelukkig heeft Microsoft besloten om in 2017 de doorontwikkeling van IE te stoppen. Toch zitten er ook tegenwoordig nog (kleine) verschillen tussen de verschillende browsers. Je doet er dan ook verstandig aan om je webpagina's af en toe te controleren in diverse (meest gebruikte) browsers. De meest gebruikte browsers zijn:
+
+* Firefox
+* Chrome
+* Edge
+* Safari (Apple)
+* Opera

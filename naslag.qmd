@@ -1,0 +1,19 @@
+# 7 Naslag {.unnumbered}
+
+Als je applicaties, in welke vorm dan ook, gaat ontwikkelen dan "is Google je beste vriend", wordt wel eens gezegd. Wat hiermee wordt bedoeld is dat oplossingen voor problemen waar je tegenaan loopt vindbaar zijn op het internet. Vrijwel elk probleem waar je tegenaan loopt is iemand anders ook al eens tegenaan gelopen. De kans is groot dat deze persoon het probleem op internet gepost heeft en iemand anders daarop geantwoord heeft en misschien wel de oplossing voor het probleem gegeven heeft. Dit wordt vaak gedaan in zogenaamde forums. 
+
+Als je in het begin gaat zoeken op internet zul je mogelijk door de bomen het bos niet meer zien. Er staat zoveel op internet dat je niet weet waar je moet beginnen. Vaak worden er meerdere, verschillende oplossingen gegeven voor "jouw" probleem. Dit kunnen zowel goede als foute oplossingen zijn. Het is voor jou zaak om deze oplossingen te beoordelen op bruikbaarheid. Dat valt in het begin niet mee. Om je op weg te helpen zijn hieronder een paar sites vermeld die je kunnen helpen bij het ontwikkelen.
+
+## 7.1 Handige sites {.unnumbered}
+
+| Site | Omschrijving | Taal |
+|:-----|:-------------|:-----|
+| [W3Schools](https://www.w3schools.com/){.external target="-blank"} | W3Schools is een site waar je uitleg over alle webtechnologiën kunt vinden. Van __HTML__ en __CSS__ tot __JavaScript__, maar ook __Bootstrap__, __jQuery__, __PostgreSQL__ en __Python__. Het handige van deze site is dat je zaken uit kunt proberen met de zogenaamde __Try it Yourself__ optie. | Engels |
+| [Handleiding HTML](https://www.handleidinghtml.nl/){.external target="_blank"} | Deze, wat verouderd ogende site, geeft uitleg over __HTML__ en __CSS__. Er is een introductie en alle HTML-elementen en CSS-eigenschappen worden uitgelegd. De site is niet meer geupdate na januari 2021 dus de nieuwste zaken ontbreken. | Nederlands |
+| [Stack Overflow](https://stackoverflow.com/){.external target="_blank"} | Misschien wel het beste forum op het gebied van applicatie ontwikkeling. Het kan geen kwaad om bij zoekresultaten voor je probleem als eerste te klikken op resultaten van deze site. Hier vind je heel vaak de juiste oplossing. | Engels |
+| [CSX](https://csx.codesmith.io/home){.external target="_blank"} | Deze site wordt onderhouden door Codesmith, een belangrijke school om te leren coderen in New York. Je vindt hier lesmateriaal over __JavaScript__ van beginners tot experts. | Engels |
+| [LeafletJS](https://leafletjs.com/){.external target="_blank"} | Op deze site vind je alles over het JavaScript framework __Leaflet__ waarmee interactieve kaarten gemaakt kunnen worden. Onder __Docs__ vind je de API beschrijving van het framework. Onder __Tutorials__ vind je een aantal handleidingen voor specifieke onderwerpen. Ook vind je hier een link naar diverse __Plugins__ om nog meer functionaliteit aan je interactieve kaart toe te voegen. | Engels | 
+| [Openlayers](https://openlayers.org/){.external target="_blank"} | Op deze site vind je alles over het JavaScript framework __Openlayers__ waarmee interactieve kaarten gemaakt kunnen worden. Je vind hier een uitgebreide __API__ omschrijving en heel veel voorbeelden waarin je kunt zoeken. | Engels |   
+
+: {tbl-colwidths="[25, 65, 10]"}
+

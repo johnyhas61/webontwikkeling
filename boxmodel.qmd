@@ -1,0 +1,126 @@
+## 3.3 CSS Boxmodel {.unnumbered}
+
+Naast dat CSS gebruikt kan worden om elementen vorm te geven, kan CSS ook gebruikt worden om een HTML-pagina in te delen. Hierbij wordt gebruik gemaakt van het zogenaamde CSS-boxmodel. Door elementen een lengte en een breedte te geven en aan te geven op welke plek op de website het element geplaatst moet worden kan een pagina ingedeeld worden.
+
+Verder spelen de padding, margin en border een rol bij de afmetingen van een element (zie figuur 1).
+
+::: {style="font-size: 80%;"}
+| Eigenschap | Omschrijving |
+|----|---|
+| padding | De ruimte tussen de rand van een element en de inhoud van het element. Dit is de ruimte binnen het element.  |
+| margin | De ruimte tussen de rand van een element en een aanliggend element. Dit is de ruimte buiten het element. |
+| border | De rand om het element. Deze heeft een specifieke dikte. |
+: {tbl-colwidths="[25,75]"}
+:::
+
+![fig. 1 Padding, margin en border](images/padding margin border.png){fig-align="left"}
+
+### 3.3.1 Afmetingen {.unnumbered}
+
+Afmetingen van elementen kunnen absoluut of relatief opgegeven worden. In onderstaande tabel staan de absolute afmetingen die gebruikt kunnen worden in CSS.
+
+::: {style="font-size: 80%;"}
+| Eenheid | Omschrijving |
+|----|---|
+| cm | centimeters  |
+| mm | millimeters |
+| in | inches (1in = 96px = 2,54cm) |
+| px | pixels  |
+| pt | points (1pt = 1/72 in) |
+| pc | picas (1pc = 12pt) |
+: Absolute afmetingseenheden {tbl-colwidths="[25,75]"}
+:::
+
+Van deze absolute afmetingen worden pixels het meest gebruikt. Ze zijn ook het makkelijkst toe te passen aangezien afmetingen van schermen ook in deze eenheden gegeven worden.
+
+In onderstaande tabel staan de relatieve afmetingen die gebruikt kunnen worden in CSS.
+
+::: {style="font-size: 80%;"}
+| Eenheid | Omschrijving |
+|----|---|
+| em | relatief ten opzichte van het gebruikte lettertype in het element. 1em is gelijk aan de font size van het huidige font  |
+| ex | relatief ten opzichte van de x-afmeting (breedte) van het huidige font (wordt zelden gebuikt) |
+| ch | relatief ten opzichte van de breedte van het cijfer 0 |
+| rem | relatief ten opzichte van het gebruikte lettertype van het root element  |
+| vw | relatief ten opzichte van de breedte van 1% van de viewport (100vw is de volledige breedte van de viewport) |
+| vh |relatief ten opzichte van de hoogte van 1% van de viewport (100vh is de volledige hoogte van de viewport) |
+| vmin | relatief ten opzichte van 1% van de kleinste van de twee viewport afmetingen (vh of vw) |
+| vmax | relatief ten opzichte van 1% van de grootste van de twee viewport afmetingen (vh of vw) | 
+| % | Relatief ten opzichte van het bovenliggende element |
+: Relatieve afmetingseenheden {tbl-colwidths="[25,75]"}
+:::
+
+De eenheden em en rem worden veel gebruikt voor schaalbare (responsive) pagina's.  Verder worden %, vh en vw veel gebruikt.
+
+Een veel gebruikte optie bij afmetingen is de mogelijkheid om de afmeting te berekenen met de calc functie. In figuur 2 staat een voorbeeld van de berekening van de breedte van een element door 310 pixels van de viewport-breedte af te trekken, omdat er bijvoorbeeld een zijbalk van 300 pixels naast wil plaatsen. Je wil dat de zijbalk een vaste breedte heeft terwijl het resterende deel van de pagina mee mag schalen met de browser.
+
+![fig. 2 Gebruik van de calc functie](images/calc.png){fig-align="left"}
+
+### 3.3.2 Afmetingen probleem {.unnumbered}
+
+Bij het opgeven van afmetingen moet er rekening mee worden gehouden dat als een breedte of hoogte wordt opgegeven dat dit de hoogte en de breedte zijn van de inhoud van het element. Als er ook nog een padding en border is ingesteld voor dit element dan wordt het element groter. Hoewel dit de volgens het W3C-consortium de standaard werkwijze is, is dit niet handig.
+
+Gelukkig is er een relatief simpele manier om te zorgen dat de browser op een andere manier werkt. Door de eigenschap __box-sizing__ voor alle elementen op __border-box__ te zetten wordt bij de hoogte- en breedte-instelling ook de padding en border meegenomen (zie figuur 3).
+
+![fig. 3 Box-sizing](images/box-sizing.png){fig-align="left"}
+
+### 3.3.3 Elementen plaatsen {.unnumbered}
+
+Elementen op een webpagina worden standaard van linksboven naar rechtsonder geplaatst. De meeste tags zorgen ervoor dat het element op een nieuwe regel geplaatst wordt. Er zijn een aantal eigenschappen die ingesteld kunnen worden om elementen op een afwijkende manier te plaatsen. Deze eigenschappen zijn:
+
+* position
+* float
+* clear
+* z-index
+* display
+
+In de volgende paragrafen worden deze eigenschappen verder toegelicht.
+
+#### 3.3.3.1 Position {.unnumbered}
+
+Met de position eigenschap plaats je een element, de naam zegt het al, op een specifieke positie op de pagina. Naast deze eigenschap wordt minimaal één van de eigenschappen __top__, __bottom__, __left__ of __right__ ingesteld om de afstand tussen het element en het punt ten opzichte waarvan het element geplaatst wordt aan te geven. Het punt ten opzichte waarvan gepositioneerd wordt, wordt via de waarde van de position eigenschap aangegeven. De position eigenschap kan de volgende waarden hebben.
+
+::: {style="font-size: 80%;"}
+| Waarde | Omschrijving |
+|----|---|
+| static | Dit is de default manier van plaatsen van elementen. Er is geen specifieke positie ingesteld. De top, bottom, left en right eigenschappen hebben geen effect.  |
+| relative | Het element wordt gepositioneerd ten opzicht van zijn normale positie.  |
+| fixed | Het element wordt gepositioneerd ten opzicht van de viewport. Dit betekent dat het element altijd op dezelfde positie op het scherm wordt geplaatst ongeacht scrolling.  |
+| absolute | Het element wordt gepositioneerd ten opzicht van het omvattende element.  |
+| sticky | Dit is een combinatie van __relative__ en __fixed__. Het element wordt geplaatst ten opzichte van de normale positie tot tijdens het scrollen een bepaalde positie ten opzichte van de viewport bereikt wordt, waarna het element vastgezet wordt.  |
+: Waardes voor position eigenschap {tbl-colwidths="[25,75]"}
+:::
+
+#### 3.3.3.2 Float {.unnumbered}
+
+Om elementen naast elkaar te kunnen plaatsen zonder dat er een specifieke positie aan wordt gegeven kan de float eigenschap gebruik worden. Door de waarde __left__ of __right__ te gebruiken gaat het element links of rechts "drijven" naast eventuele tekst of een ander element. De elementen moeten qua afmetingen wel naast elkaar passen. In figuur 4 zie je hoe de float eigenschap gebruikt wordt om een zijbalk links te plaatsen en de hoofdtekst van de pagina daarnaast aan de rechterkant.
+
+![fig. 4 Float eigenschap](images/float.png){fig-align="left"}
+
+#### 3.3.3.3 Clear {.unnumbered}
+
+Als je elementen plaatst met de float eigenschap en je wil een ander element daaronder plaatsen dan kun je de clear eigenschap gebruiken. Met deze eigenschap geef je aan wanneer een element geplaatst kan worden als een deel van de pagina "vrij" komt doordat er geen float element meer aanwezig is. Je kunt hierbij kiezen uit __left__, __right__ en __both__. Bij left moet de linkerkant vij zijn, bij right de rechterkant en bij both moet de hele pagina vrij zijn. Deze laatste wordt meestal gebruikt bij een footer op de pagina die helemaal onderaan de pagina komt over de volle breedte (zie figuur 5).
+
+![fig. 5 Clear eigenschap](images/clear.png){fig-align="left"}
+
+#### 3.3.3.4 Z-index {.unnumbered}
+
+Soms is het nodig om elementen over elkaar heen te plaatsen. Denk bijvoorbeeld aan een legenda op een interactieve kaart. Het is dan soms niet altijd duidelijk welk element boven komt te liggen. Met de z-index eigenschap kun je aangeven door middel van een getal welk element boven een ander element ligt. De waardes kunnen zowel positief als negatief zijn. Het element met een hogere waarde voor de z-index ligt boven een element met een lagere z-index. Als geen z-index wordt opgegeven dan heeft een element standaard de z-index van nul.
+
+#### 3.3.3.5 Display {.unnumbered}
+
+Met de display eigenschap kun je instellen of en hoe een element getoond wordt op de webpagina. Elk HTML-element heeft een standaard display eigenschap die verschilt per element. Sommige elementen hebben zijn zogenaamde block elementen (bijv. div, h1 t/m h6, p, header enz.) die op een nieuwe regel getoond worden en de volledige breedte van de pagina innemen en sommige zijn zogenaamde inline elementen (span, a, img enz.) die in dezelfde regel getoond worden. Je kunt deze eigenschap overschrijven. De display eigenschap kan veel waardes krijgen. Een aantal van deze waardes staan in onderstaande tabel.
+
+::: {style="font-size: 80%;"}
+| Waarde | Omschrijving |
+|----|---|
+| none | Het element wordt niet getoond. Het element neemt geen ruimte in op de webpagina. Eventuele elementen na het element schuiven op. |
+| inline | Het element wordt geplaatst in de regel waarin het is opgenomen. Het instellen van hoogte of breedte heeft geen effect.  |
+| block | Het element wordt geplaatst op een nieuwe regel en neemt de volledige breedte van de pagina in beslag.  |
+| inline-block | Het element wordt geplaatst in de regel waarin het is opgenomen. Hoogte en breedte kunnen ingesteld worden.  |
+: Waardes voor display eigenschap {tbl-colwidths="[25,75]"}
+:::
+
+::: {.callout-note}
+Er is ook een visibility: hidden; eigenschap. In tegenstelling tot de display: none; instelling neemt het element in dit geval nog wel ruimte in op de webpagina, maar is alleen niet zichtbaar.
+:::

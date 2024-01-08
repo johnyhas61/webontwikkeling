@@ -1,0 +1,58 @@
+## 3.4 Responsive website {.unnumbered}
+
+HTML is initieel ontwikkeld voor "desktop" computers. Tegenwoordig worden sites ook veel via mobiele devices bezocht. Misschien zelfs wel meer dan via een "gewone" desktop browser. Een belangrijk verschil daarbij is de schermafmeting waarmee de pagina bekeken wordt. Om te zorgen dat de pagina er op de verschillende soorten devices goed uitziet wordt een pagina responsive gemaakt. Dat wil zeggen dat de pagina zich aanpast aan de afmetingen van het device waarmee het bekeken wordt.
+
+Om een pagina responsive te maken zijn twee zaken nodig:
+
+@. Toevoegen van een meta-tag in de head-sectie
+@. Gebruik maken van media-query's in de CSS
+
+### 3.4.1 Meta-tag {.unnumbered}
+
+Als een webpagina op een mobiel device bekeken wordt zal de browser op dat mobiele device de pagina op precies dezelfde manier opbouwen als op een desktop. Gevolg hiervan is dat de site er heel klein uitziet op het mobiele device. Om de teksten te kunnen lezen zal de gebruiker ver in moeten zoomen omdat de teksten erg klein worden weergegeven. Om dit te voorkomen kan in de head-tag van de HTML-pagina een zogenaamde meta viewport-tag opgenomen worden (zie figuur 1).
+
+![fig. 1 Meta viewport-tag](images/meta%20viewport.png){fig-align="left"}
+
+
+### 3.4.2 Media query's {.unnumbered}
+
+Om een website responsive te maken moet de opmaak van verschillende elementen anders zijn als de pagina bekeken wordt op een desktop als wanneer deze bekeken wordt op een mobiel device. Zo kunnen elementen in de desktopweergave naast elkaar weer gegeven worden terwijl ze in de mobiele weergave onder elkaar weergegeven woeten worden. Je zou dus eigenlijk voor beide weergaven aparte CSS toe willen passen. Dit kan gedaan worden met zogenaamde media query's. Bij media query's maak je een aparte sectie in de CSS die alleen toegepast wordt als bijvoorbeeld het scherm een maximale (of minimale) breedte heeft. 
+
+In figuur 2 staat voorbeeld CSS waarbij een zijbalk (aside) en de hoofdtekst (section) in de desktopweergave naast elkaar worden getoond en waarbij de zijbalk in de mobiele weergave verborgen wordt en de hooftekst de volledige breedte in beslag neemt. Zoals je ziet hoef je de media query alleen op te nemen voor de mobiele weergave. Alleen de eigenschappen worden hierin opgenomen die een afwijkende opmaak krijgen ten opzichte van de desktop weergave. De andere eigenschappen houden dezelfde opmaak als in de desktop weergave. Je kunt dit ook omdraaien en een media query opnemen met een min-width van 769px voor de desktop weergave. Ook is het mogelijk om meerdere media query's op te nemen voor bijvoorbeeld weergave op een breed desktopscherm, een tablet of een mobiele telefoon. De breedtes van de schermen waarop omgeschakeld wordt van de ene opmaak naar de andere noemen we breakpoints.
+
+![fig. 2 Voorbeeld media query](images/media%20query.png){fig-align="left"}
+
+
+### 3.4.3 Frameworks {.unnumbered}
+
+Je kunt je voorstellen dat het maken van een responsive website op basis van media query's voor verschillende sooren devices een tijdrovende bezigheid is. Niet alleen het invoeren van de juiste CSS is veel werk, maar ook het testen kan veel tijd in beslag nemen, omdat er voor de diverse soorten devices getest moet worden. Om het leven wat makkelijker te maken zijn er diverse frameworks beschikbaar die dit al hebben uitgewerkt in een uitgebreide CSS. Ook wordt er vaak een JavaScript bestand bij geleverd om overgangen mooi te laten verlopen en bijvoorbeeld animaties toe te voegen bij het openen van een bijvoorbeeld een popup. Een veel gebruikt framework is [Bootstrap&trade;](https://getbootstrap.com/){.external target="-blank"}.
+
+Je kunt gebruik maken van dit framework door een CDN koppeling naar de CSS (figuur 3) en naar de JavaScript (figuur 4) toe te voegen aan je webpagina. 
+
+![fig. 3 CDN Bootstrap CSS](images/cdn%20bootstrap%20css.png){fig-align="left"}
+
+![fig. 4 CDN Bootstrap JavaScript](images/cdn%20bootstrap%20js.png){fig-align="left"}
+
+Het framework maakt gebruik van classes waarin de opmaak van elementen is vastgelegd. Door de verschillende classes te combineren kan de gewenste opmaak bereikt worden. Daarnaast biedt het framework een heleboel [componenten](https://getbootstrap.com/docs/5.3/components/){.external target="-blank"} waarmee fraaiere websites gemaakt kunnen worden. Zo is er een menubalk (navbar) die in de mobiele weergave in een zogenaamd hamburger menu veranderd. 
+
+Voor het responsive indelen van de pagina kan bij Bootstrap (en de meeste andere framworks) gebruik worden gemaakt van een zogenaamd grid dat het scherm indeelt in 12 kolommen. Er is gekozen voor 12, omdat dit door veel andere getallen deelbaar is, namelijk door 2, 3, 4 en 6. Hierdoor zijn er veel mogelijkheden om de breedte van het scherm op te delen. Hiervoor wordt gebuik gemaakt van kolommen waarvoor met verschillende classes opgegeven wordt hoeveel van de 12 kolommen van het grid ze in beslag nemen voor de diverse breakpoints. Hiervoor kent Bootstrap 5 breakpoints (zie figuur 5) die via het voorvoegsel sm, md, lg, xl, xxl aan de class toegevoegd kunnen worden.  
+
+![fig. 5 Bootstrap breakpoints](images/breakpoints%20bootstrap.png){fig-align="left"}
+
+Hierdoor kan op een redelijk eenvoudige manier een webpagina responsive gemaakt worden. In figuur 6 staat een voorbeeld van de HTML die gebruik maakt van bootstrap waarbij hetzelfde effect bereikt wordt als in figuur 2 met CSS. Zoals je ziet zorgt het werken met zo'n framework ervoor dat je juist meer met HTML bezig bent dan met CSS.
+
+![fig. 5 Bootstrap grid gebruik](images/bootstrap%20grid.png){fig-align="left"}
+
+Hierin betekenen de verschillende classes het volgende:
+
+::: {style="font-size: 80%;"}
+| class | betekenis |
+|---|---|
+| row  | Deze tag fungeert als rij voor het grid  |
+| d-none  | Op een device dat kleiner is dan 576 pixel wordt dit element niet getoond (display: none)  |
+| d-sm-block | Op een device dat groter of gelijk is aan 576 pixel wordt dit element getoond (display: block) |
+| col-sm-3  | Op een device dat groter of gelijk is aan 576 pixel neemt dit element 3 kolommen in beslag van de 12  |
+| col-12 | Op een device dat kleiner is dan 576 pixel neemt dit element 12 kolommen in beslag (volledige breedte) |
+| col-sm-9 | Op een device dat groter of gelijk is aan 576 pixel neemt dit element 9 kolommen in beslag van de 12 |
+: {tbl-colwidths="[25, 75]"}
+:::

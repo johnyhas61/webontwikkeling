@@ -1,0 +1,7 @@
+## 4.2 JavaScript syntax {.unnumbered}
+
+JavaScript hoort tot de groep van programmeertalen die afgeleid zijn van de programmeertaal C. Deze talen hebben allemaal dezelfde syntax-regels. Deze regels zijn als volgt:
+
+* JavaScript is hoofdlettergevoelig (case sensitive). 
+* Blokken code worden tussen accolades geplaats ({ en }).
+* JavaScript kent verkorte schrijfwijzes voor rekenkundige bewerkingen en het if-commando

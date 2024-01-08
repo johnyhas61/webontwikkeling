@@ -1,0 +1,49 @@
+## 2.2 Tags {.unnumbered}
+
+De basis van een HTML-pagina wordt gevormd door zogenaamde tags. Dit zijn stuurcommando's voor de browser om de webpagina op te bouwen. Je kunt een tag herkennen doordat deze tussen de tekens < en > geplaatst zijn. Sommige tags hebben een open- en een sluit tag. In dit geval staat in de sluit tag een / na het < teken. (zie figuur 1). 
+
+![fig. 1 Open- en sluit tag](images/open%20en%20sluit%20tag.png){fig-align="left"}
+
+Er zijn ook tags waarbij geen sluit-tag wordt gebruikt. Bij dit soort tags wordt de / soms aan het eind van de tag geplaats voor het > teken. Dit is echter niet verplicht en wordt dan ook vaak niet gedaan. (zie figuur 2).
+
+![fig. 2 Zonder sluit tag](images/zonder%20sluit%20tag.png){fig-align="left"}
+
+### 2.2.1 Attributen {.unnumbered}
+
+Binnen een tag kan er gebruik gemaakt worden van zogenaamde attributen. Bij sommige tags is het verplicht om 1 of meerdere attributen op te nemen en bij andere tags hoeft geen enkele attribuut opgenomen te worden. Bijvoorbeeld bij de img-tag, om afbeeldingen te plaatsen, is het src-attribuut verplicht om de naam van de afbeelding op te geven. (zie figuur 2).
+
+Hoewel de lijst met mogelijk attributen lang is zul je in de praktijk slechts een beperkt aantal gebruiken. De belangrijkste zijn:
+
+::: {style="font-size: 80%;"}
+| attribuut | toepassing |
+|---|---|
+| src  | koppeling naar een afbeelding of JavaScript bestand  |
+| href  | koppeling naar andere pagina, website of css bestand  |
+| rel | de relatie die het gekoppelde bestand heeft met de HTML (stylesheet) |
+| target  | plek waar koppeling naar andere pagina of website geopend moet worden  |
+| id | unieke identificatie van een element op een pagina |
+| class | 1 of meerdere (opmaak)classes die gekoppeld zijn aan een element |
+:::
+
+Vanaf versie 5 van HTML is het niet meer de bedoeling om opmaak van een element te regelen via het __style__-attribuut. Dit moet in de CSS geregeld worden (zie hoofdstuk 3). In "oudere" websites kun je dit attribuut nog tegen komen.
+
+### 2.2.2 Basis HTML document
+
+In figuur 4 zie je een basis HTML5-document. We bekijken regel voor regel wat de functie hiervan is.
+
+![fig. 4 Basis indeling HTML document](images/basis%20pagina.png){fig-align="left"}
+
+* In de eerste regel met de __DOCTYPE__ tag wordt aangegeven dat dit een HTML 5 document is. Hierdoor weet de browser om wat voor document het gaat en kan het document op de juiste manier verwerken en omzetten naar een webpagina.
+* Tussen de &lt;html&gt; en &lt;/html&gt; tags staat de feitelijk pagina. Dit zijn de eerste en laatste tag van de pagina. Na de &lt;/html&gt; komt niets meer.
+* Een HTML-pagina is onderverdeeld in twee delen:
+  * Een __head__ gedeelte waarin allerlei instellingen gedaan worden en koppelingen naar CSS (en eventueel JavaScript)bestanden gelegd worden. In dit gedeelte komt geen tekst die op de webpagina getoond moet worden.
+    * De __meta charset__ tag in regel 5 geeft aan dat de te gebruiken karakterset voor deze pagina utf-8 is. Dit is een karakterset die vrijwel alle mogelijke tekens bevat die wereldwijd voorkomen. Vanaf HTML5 wordt aanbevolen deze karakterset te gebruiken.
+    * De __meta name="viewport"__ tag in regel 6 zorgt ervoor dat de webpagina ook op mobiele devices goed getoond wordt. Weglaten van deze tag resulteert er meestal in dat een website die ontwikkeld is voor een desktop op een mobiel device heel klein getoond word. 
+    * De __titel__ tag is een verplichte tag in het head gedeelte. Deze geeft de titel van de webpagina aan en deze wordt getoond in het tabblad van de browser waarin de pagina is geopend.
+    * Met de __link__ tag wordt een koppeling gelegd met een CSS bestand waarin de opmaak voor de website is opgenomen. Het __rel="stylesheet"__ attribuut is hierbij belangrijk. Daardoor weet de browser dat het gaat om een bestand waarin de opmaak van de webpagina is opgenomen. Er kan in de __head__ sectie een koppeling gelegd worden met meerdere CSS bestanden.
+  * Een __body__ gedeelte waarin de inhoud van de webpagina wordt opgenomen. Voor de indeling van ene pagina zijn veel verschillende tags aanwezig. Vanaf HTML5 zijn een aantal tags toegevoegd om de pagina te structureren. De tags zijn niet verplicht, maar worden wel geadviseerd. Het gebruik van deze tags verhoogt de plek in zoekresultaten van zoekmachines. Geen van deze tags heeft standaard een opmaak. Deze moet geregeld worden door middel van CSS.  
+    * De __header__ tag wordt gebruikt om de kop van een website te maken.
+    * In de __nav__ tag komt de navigatie (het menu) van de website.
+    * De __aside__ kan gebruikt worden om een zijbalk aan de pagina toe te voegen. 
+    * In de __section__ komt de "hoofdtekst" van de pagina te staan. Deze tekst kan eventueel worden onderverdeeld door gebruik te maken van één of meerdere __article__ tags.
+    * In de __footer__ tot slot kan eventueel een voettekst opgenomen worden.  

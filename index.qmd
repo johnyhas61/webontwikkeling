@@ -1,0 +1,9 @@
+# Voorwoord {.unnumbered}
+
+In dit lesmateriaal worden de basisprincipes van webontwikkeling voor studenten van de opleiding Applied Geo-Information Science van HAS green academy uitgelegd.
+In het lesmateriaal komen de volgende onderwerpen aan de orde:
+
+* Het maken van webpagina's met HTML
+* Het vormgeven van webpagina's met CSS
+* Het interactief maken van webpagina's met JavaScript
+* Het maken van een interactieve kaart op een webpagina met het JavaScript framework Leaflet of Openlayers

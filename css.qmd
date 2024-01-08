@@ -1,0 +1,36 @@
+## 3.1 Inleiding CSS {.unnumbered}
+
+Bij webontwikkeling wordt CSS gebruikt voor het vormgeven (uiterlijk en indeling) van webpagina's. CSS staat voor Cascading Style Sheets. Hierin staat Cascading (waterval) voor de mogelijkheid dat opmaak die is ingesteld voor een element meegenomen wordt naar alle onderliggende elementen. Het grote voordeel van het gebruik van CSS is dat de opmaak van webpagina's los gekoppeld wordt van de feitelijke inhoud van die pagina's. 
+
+CSS bestaat als sinds 1994 en ook hier is het W3C-consortium verantwoordelijk voor het onderhouden van standaarden op het gebied van CSS. De huidige versie is CCS3.
+
+### 3.1.1 Gebruik van CSS {.unnumbered}
+
+CSS kun je op drie manieren gebruiken:
+
+@. Je kunt het style-attribuut opnemen in een tag.
+@. Je kunt in een HTML-pagina tussen &lt;style&gt; en &lt;/style&gt; CSS definities opnemen.
+@. Je kunt een apart CSS bestand maken en dit koppelen aan elke HTML-pagina.
+
+Optie 1 wordt vanaf HTML versie 5 niet meer "toegestaan". Omdat browsers nog steeds met oude webpagina's overweg moeten kunnen, ondersteunen zij deze optie nog steeds. De verwachting is dat dit in de toekomst niet meer ondersteund wordt.
+
+Het nadeel van optie 2 is dat de opmaak op elke HTML-pagina opnieuw ingevoerd moet worden. Dit is de reden dat optie 3 verreweg de voorkeur heeft. 
+
+### 3.1.2 Koppelen van een CSS-bestand {.unnumbered}
+
+Om te werken met een apart CSS bestand, maak je een bestand in de IDE met de extensie __.css__. Hierdoor weet de IDE dat het om een CSS bestand gaat en zal diverse hints geven bij het ontwikkelen. Je kunt het bestand eventueel in een submap zetten. ook is het mogelijk om meerdere CSS bestanden te maken. Het koppelen van dit CSS-bestand aan een HTML-pagina gaat met behulp van de __link__-tag. In figuur 1 zie je een voorbeeld van deze tag.
+
+![fig. 1 Link naar een CSS-bestand](images/link%20stylesheet.png){fig-align="left"}
+
+Het __rel="stylesheet"__ attribuut is hierbij belangrijk. Daardoor weet de browser dat het gaat om een bestand waarin de opmaak van de webpagina is opgenomen. Door deze tag op te nemen in alle HTML-bestanden van de site hebben alle pagina's dezelfde opmaak. Voorwaarde is wel dat alle pagina's dezelfde tag-indeling hebben.
+
+### 3.1.3 Preprocessing scripts
+
+Omdat CSS-bestanden erg uitgebreid kunnen zijn en bepaalde instellingen zoals kleuren op meerdere plekken in de CSS gebruikt worden bestaan er tegenwoordig zogenaamde __preprocessing CSS script talen__. Dit zijn talen waarbij met behulp van onder andere variabelen CSS gegenereerd kan worden met behulp van een preprocessor. Bekende CSS preprocessors zijn:
+
+* SASS
+* SCSS
+* Less
+* Stylus
+
+We gaan hier in dit lesmateriaal niet verder op in.
